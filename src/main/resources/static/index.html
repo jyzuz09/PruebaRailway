@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STOCK MSFT FOXCONN</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .login-card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .btn-msft {
+            background-color: #F25022;
+            color: white;
+        }
+        .btn-msft:hover {
+            background-color: #D13438;
+        }
+    </style>
+</head>
+<body class="bg-light">
+<nav class="navbar navbar-dark bg-dark p-3">
+    <div class="container d-flex justify-content-between align-items-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo" height="40" class="me-2">
+        <a class="navbar-brand mx-auto" href="#">STOCK MSFT FOXCONN</a>
+        <img src="https://cdn.freebiesupply.com/logos/large/2x/foxconn-logo-png-transparent.png" alt="Foxconn Logo" height="15" class="ms-2">
+    </div>
+</nav>
+
+<div class="container text-center mt-5">
+    <h1 class="mb-3">BIENVENIDO A INVENTARIO DE SPARE PARTS</h1>
+    <p class="lead">Pruebas MSFT (FBT)</p>
+
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card p-4 login-card">
+                <h4 class="mb-3">Inicio de Sesión</h4>
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="username" placeholder="Usuario" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
+                    </div>
+                    <button type="button" class="btn btn-msft w-100" onclick="login()">Ingresar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function login() {
+        // Obtener los valores ingresados
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        // Verificación simple de las credenciales
+        if (username === "admin" && password === "admin123") {
+            // Redirigir a la página de administrador
+            window.location.href = "administrador.html";
+        } else if (username === "user" && password === "user123") {
+            // Redirigir a la página de usuario
+            window.location.href = "usuario.html";
+        } else {
+            // Si las credenciales son incorrectas, mostrar un mensaje
+            alert("Credenciales incorrectas");
+        }
+    }
+</script>
+</body>
+</html>
